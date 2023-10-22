@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Aladin&family=Averia+Sans+Libre&family=Dancing+Script:wght@500&family=Kodchasan:wght@200&family=Laila&family=Pacifico&family=Qwitcher+Grypen:wght@700&family=Roboto:wght@300&family=Rochester&family=Sofia&display=swap');
+@import "./Mixing.scss" ;
+@import "./Variables.scss" ;
+.TasksPage{
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background-color: #04364A;
+    .NavBar{
+        background-color: transparent;
+        button:hover{
+            background-color: #2894b8;
+            color: white;
+        }
+    }
+    main{
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .TasksContainer {
+            width: 40%;
+            height: 50vh;
+            background-color: #176B87;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+            border-radius: 25px;
+            margin-top: 20px;
+            @include respond-to($breakpoint-sm) {
+                width: 90%;
+                margin-top: 10%;
+            }
+            @include respond-to($breakpoint-lg) {
+                width: 90%;
+            }
+            .UpdateTask{
+                padding: 30px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+                .concelBtn{
+                    border-radius: 25px;
+                    background-color: red;
+                }
+            }
+            input , button{
+                padding: 10px 20px;
+                border: none;
+                outline: none;
+                font-size: 0.9rem;
+                @include respond-to($breakpoint-sm) {
+                    padding: 10px;
+                }
+            }
+            input{
+                border-radius: 25px 0 0 25px;
+                width: 70%;
+            }
+            button{
+                border-left: none;
+                border-radius: 0 25px 25px 0;
+                text-transform: capitalize;
+                cursor: pointer;
+                background-color: #2894b8;
+                color: white;
+                width: 30%;
+            }
+            .Tasks{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                overflow-y: scroll;
+                .Task{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    input{
+                        width: 25px;
+                        height: 25px;
+                        cursor: pointer;
+                    }
+                    h3{
+                        color: white;
+                        font-family: "Laila" , cursive;
+                        width: 70%;
+                        overflow-x: hidden;
+                    }
+                    .icons{
+                        display: flex;
+                        gap: 10px;
+                        width: 20%;
+                        .icon{
+                            width: 25px;
+                            height: 25px;
+                            background-color: white;
+                            color: #176B87;
+                            cursor: pointer;
+                            border-radius: 50%;
+                            padding: 2px;
+                        }
+                    }
+                    
+                }
+            }
+            .Tasks::-webkit-scrollbar-track{
+                border: 5px solid white;
+                border-color: transparent;
+                background-color: transparent;
+            }
+            .Tasks::-webkit-scrollbar{
+                width: 6px;
+                background-color: transparent;
+            }
+
+            .Tasks::-webkit-scrollbar-thumb{
+                background-color: white;
+                border-radius: 10px;
+            }
+        }
+        .Profile{
+            width: 33%;
+            height: auto;
+            background-color: #176B87;
+            padding:30px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            border-radius: 25px;
+            margin: 20px 0;
+            @include respond-to($breakpoint-sm) {
+                width: 90%;
+            }
+            @include respond-to($breakpoint-lg) {
+                width: 80%;
+            }
+            img{
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                object-fit: cover;
+                object-position: top center;
+                @include respond-to($breakpoint-sm) {
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+            h3{
+                color: white;
+                font-family: "Laila" , cursive;
+            }
+            .btns{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                button{
+                    cursor: pointer;
+                    padding: 10px;
+                    font-size: 0.8;
+                    text-transform: capitalize;
+                    border: none;
+                    border-radius: 5px;
+                }:nth-child(2){
+                    background-color: red;
+                    color: white;
+                }
+                :nth-child(1){
+                    color: #04364A;
+                }
+            }
+        }
+        .UpdateProfile  , .DeleteProfile {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+                justify-content: center;
+                .ProfileImg{
+                    cursor: pointer;
+                    object-fit: cover;
+                    object-position: top center;
+                }
+                label{
+                    cursor: pointer;
+                }
+            }
+            h2{
+                color: white;
+                font-family: "Laila" , cursive;
+                text-transform: capitalize;
+                text-align: center;
+                @include respond-to($breakpoint-sm) {
+                    font-size: 1.2rem;
+                }
+            }
+            input , button{
+                padding: 10px;
+                font-size: 0.9rem;
+                border: none;
+                outline: none;
+                color: #176B87;
+                width: 80%;
+            }
+            button{
+                cursor: pointer;  
+            }
+            .btn2{
+                background-color: #2894b8;
+                color: white;
+            }
+        }
+    }
+    
+}

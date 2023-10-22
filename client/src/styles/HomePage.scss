@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Aladin&family=Averia+Sans+Libre&family=Dancing+Script:wght@500&family=Kodchasan:wght@200&family=Laila&family=Pacifico&family=Qwitcher+Grypen:wght@700&family=Roboto:wght@300&family=Rochester&family=Sofia&display=swap');
+@import "./Mixing.scss" ;
+@import "./Variables.scss" ;
+
+.HomePage{
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background-color: #176B87;
+    main{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        @include respond-to($breakpoint-sm) {
+            flex-direction: column-reverse;
+        }
+        .imgContainer{
+            height: 100%;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include respond-to($breakpoint-sm) {
+                width: 100%;
+            }
+          img {
+                height: 400px;
+                width: 400px;
+                @include respond-to($breakpoint-lg) {
+                    height: 300px;
+                    width: 300px;
+                    margin-top: 20px;
+                }
+                @include respond-to($breakpoint-sm) {
+                    height: 150px;
+                    width: 150px;
+                    margin-top: 20px;
+                }
+            }  
+        }
+        .description{
+            height: 100%;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding:0 50px;
+            gap: 30px;
+            @include respond-to($breakpoint-sm) {
+                width: 100%;
+                padding: 0 15px;
+            }
+            h1 {
+                color: white;
+                font-family: 'Dancing Script', cursive;
+                font-size: 3rem;
+                @include respond-to($breakpoint-sm) {
+                    margin-top: 20px;
+                    font-size: 2rem;
+                }
+            }
+            p{
+                font-size: 1.3rem;
+                color: white;
+                text-align: center;
+                line-height: 30px;
+                font-family: "Laila" , cursive;
+                @include respond-to($breakpoint-sm) {
+                    width: 100%;
+                    font-size: 1.1rem;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
