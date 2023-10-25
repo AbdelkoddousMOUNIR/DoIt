@@ -6,6 +6,7 @@ import LoginPage from './pages/LoginPage'
 import HomePage from './pages/HomePage'
 import ProtectedRoute from './pages/ProtectedRoute'
 import TasksPage from './pages/TasksPage'
+import PageNotFound from './pages/PageNotFound'
 
 export default function App() {
   return (
@@ -16,8 +17,9 @@ export default function App() {
               <Route path='/register' element={<RegisterPage />}></Route>
               <Route path='/login' element={<LoginPage />}></Route>
               <Route element={<ProtectedRoute />}>
-              <Route path='/tasks' element={<TasksPage />}></Route>
+                <Route path='/tasks' element={<TasksPage />}></Route>
               </Route> 
+              <Route path='*' element={<PageNotFound />}></Route>
           </Routes>
         </Router>
       </div>
