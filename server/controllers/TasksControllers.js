@@ -49,7 +49,7 @@ module.exports.deleteTask = async (req, res) => {
         if (!deletedTask) {
             return res.status(404).json({ msg: "Task not found" });
         }
-        res.status(200).json({ msg: `Task with ID ${req.params.id} has been deleted successfully` });
+        res.status(200).json({ msg: 'Task has been deleted successfully' });
     } catch (error) {
         res.status(500).json({ msg: "Internal Server Error" });
     }

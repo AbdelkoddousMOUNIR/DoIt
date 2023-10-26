@@ -28,7 +28,9 @@ module.exports.updateUser = async (req, res) => {
     if (!user) {
       return res.status(400).json({ msg: 'User not found!' });
     }
-
+    if (!Password) {
+      return res.status(400).json({ msg: 'enter your Password !' });
+    }
     // Check if the provided password is correct
     const isPasswordCorrect = await bcrypt.compare(Password, user.Password);
 
@@ -67,7 +69,7 @@ module.exports.updateUser = async (req, res) => {
       return res.status(400).json({ msg: 'Failed to update user!' });
     }
 
-    return res.status(200).json({ updatedUser });
+    return res.status(200).json({msg: "updated successfully"});
   } catch (error) {
     console.error('Error updating user:', error);
     return res.status(500).json({ msg: 'Internal Server Error' });
