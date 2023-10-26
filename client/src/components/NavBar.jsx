@@ -16,7 +16,7 @@ export default function NavBar() {
 
   let getUser = async () => {
     try {
-      const { data } = await axios.get(`http://localhost:5000/user/${isAuth}`, {
+      const { data } = await axios.get(`https://doit-5hrl.onrender.com/user/${isAuth}`, {
         headers: {
             accesstoken: localStorage.getItem('token')
         }

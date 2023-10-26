@@ -10,7 +10,7 @@ export default function DeleteProfile() {
   let isAuth = localStorage.getItem("userId")
   let deleteUserAccount = async () => {
     try {
-        await axios.delete(`http://localhost:5000/user/${isAuth}`, {
+        await axios.delete(`https://doit-5hrl.onrender.com/user/${isAuth}`, {
         headers: {
             accesstoken: localStorage.getItem('token')
         }

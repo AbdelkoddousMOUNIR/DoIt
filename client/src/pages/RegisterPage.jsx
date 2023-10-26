@@ -27,7 +27,7 @@ function RegisterPage() {
     if (handleValidation()) {
       const { UserName, Gmail, Password } = values;
       try {
-        const { data } = await axios.post('http://localhost:5000/auth/register', {
+        const { data } = await axios.post('https://doit-5hrl.onrender.com/auth/register', {
           UserName,
           Gmail,
           Password,

@@ -26,7 +26,7 @@ function LoginPage() {
     if (handleValidation()) {
       const { Gmail, Password } = values;
       try {
-        const {data} = await axios.post('http://localhost:5000/auth/login', {
+        const {data} = await axios.post('https://doit-5hrl.onrender.com/auth/login', {
           Gmail,
           Password,
         });

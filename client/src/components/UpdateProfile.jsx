@@ -28,7 +28,7 @@ export default function UpdateProfile() {
       formData.append('Password', updatedUserInfos.Password);
       formData.append('NewPassword', updatedUserInfos.NewPassword);
 
-      await axios.put(`http://localhost:5000/user/${isAuth}`, formData, {
+      await axios.put(`https://doit-5hrl.onrender.com/user/${isAuth}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           'accesstoken': localStorage.getItem('token'),
