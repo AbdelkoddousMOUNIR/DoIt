@@ -64,7 +64,7 @@ function LoginPage() {
       <div className="LoginPage">
         <div className="container">
           <div className="logo">
-            <h1>doIt</h1>
+            <h1>DoIt</h1>
           </div>
           <form onSubmit={handleSubmit}>
             <input type="email" name="Gmail" placeholder="Gmail" onChange={handleChange} required />

@@ -69,7 +69,7 @@ function RegisterPage() {
       <div className="RegisterPage">
         <div className="container">
           <div className="logo">
-            <h1>doIt</h1>
+            <h1>DoIt</h1>
           </div>
           <form onSubmit={handleSubmit}>
             <input type="text" name="UserName" placeholder="User Name" onChange={handleChange} required />
