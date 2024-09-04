@@ -10,7 +10,7 @@ export default function UpdateTask() {
   let handelSubmit = async (e) => {
       e.preventDefault()
       try {
-        await axios.put(`https://doit-5hrl.onrender.com/tasks/updateTask/${taskId}`, {task : updatedTask} , {
+        await axios.put(`https://doit-84ff.onrender.com/tasks/updateTask/${taskId}`, {task : updatedTask} , {
           headers: {
               accesstoken: localStorage.getItem('token')
           }
