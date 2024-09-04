@@ -12,7 +12,7 @@ export default function Task({ task, isCompleted, taskId }) {
     setCompletedTask(!completedTask); // Optimistic update
 
     try {
-      await axios.put(`https://doit-5hrl.onrender.com/tasks/updateTask/${taskId}`, { isCompleted: !completedTask }, {
+      await axios.put(`https://doit-84ff.onrender.com/tasks/updateTask/${taskId}`, { isCompleted: !completedTask }, {
         headers: {
           accesstoken: localStorage.getItem('token'),
         },
@@ -25,7 +25,7 @@ export default function Task({ task, isCompleted, taskId }) {
 
   const deleteTask = async () => {
     try {
-      await axios.delete(`https://doit-5hrl.onrender.com/tasks/deleteTask/${taskId}`, {
+      await axios.delete(`https://doit-84ff.onrender.com/tasks/deleteTask/${taskId}`, {
         headers: {
           accesstoken: localStorage.getItem('token'),
         },
