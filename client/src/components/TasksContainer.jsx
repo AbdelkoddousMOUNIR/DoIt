@@ -14,7 +14,7 @@ export default function TasksContainer() {
 
   let getTasks = async () => {
     try {
-      const { data } = await axios.get(`https://doit-5hrl.onrender.com/tasks/getTasks/${isAuth}`, {
+      const { data } = await axios.get(`https://doit-84ff.onrender.com/tasks/getTasks/${isAuth}`, {
         headers: {
             accesstoken: localStorage.getItem('token')
         }
@@ -32,7 +32,7 @@ export default function TasksContainer() {
   let handelSubmit = async (e) => {
     e.preventDefault()
     try {
-      await axios.post(`https://doit-5hrl.onrender.com/tasks/postTask/${isAuth}`, {task : task} , {
+      await axios.post(`https://doit-84ff.onrender.com/tasks/postTask/${isAuth}`, {task : task} , {
         headers: {
             accesstoken: localStorage.getItem('token')
         }
